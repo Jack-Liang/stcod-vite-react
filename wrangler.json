@@ -5,9 +5,9 @@
 	"compatibility_date": "2025-10-08",
 	"compatibility_flags": ["nodejs_compat"],
 	"observability": {
-		"enabled": true
+		"enabled": false
 	},
-	"upload_source_maps": true,
+	"upload_source_maps": false,
 	"assets": {
 		"directory": "./dist/client",
 		"not_found_handling": "single-page-application"
