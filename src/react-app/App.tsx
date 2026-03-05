@@ -155,7 +155,7 @@ function App() {
   const [currentLang, setCurrentLang] = useState<'en' | 'zh'>('en');
   const [scrolled, setScrolled] = useState(false);
   const cursorLightRef = useRef<HTMLDivElement>(null);
-  const rafRef = useRef<number>();
+  const rafRef = useRef<number | undefined>(undefined);
   const mousePos = useRef({ x: 0, y: 0 });
 
   const t = useTranslation(currentLang);
@@ -219,13 +219,13 @@ function App() {
   ], []);
 
   // 代码打字机效果
-  const codeLines = useMemo(() => [
-    { text: 'const stcod = {', className: '' },
-    { text: '  innovate: () => "Smart Solutions",', className: 'indent' },
-    { text: '  create: () => "Clean Code",', className: 'indent' },
-    { text: '  deliver: () => "Excellence"', className: 'indent' },
-    { text: '};', className: '' },
-  ], []);
+//   const codeLines = useMemo(() => [
+//     { text: 'const stcod = {', className: '' },
+//     { text: '  innovate: () => "Smart Solutions",', className: 'indent' },
+//     { text: '  create: () => "Clean Code",', className: 'indent' },
+//     { text: '  deliver: () => "Excellence"', className: 'indent' },
+//     { text: '};', className: '' },
+//   ], []);
 
   return (
     <>
